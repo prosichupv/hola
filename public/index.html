@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Hola desde Nginx en Codespaces!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 ¡Nginx funcionando en GitHub Codespaces!</h1>
+        </header>
+        
+        <main>
+            <div class="welcome-card">
+                <h2>¡Bienvenido!</h2>
+                <p>Tu servidor Nginx está corriendo exitosamente en el puerto 8080.</p>
+                <p>Este es un ejemplo básico de cómo configurar nginx en un codespace.</p>
+            </div>
+            
+            <div class="info-card">
+                <h3>📋 Información del servidor</h3>
+                <ul>
+                    <li><strong>Servidor:</strong> Nginx</li>
+                    <li><strong>Puerto:</strong> 8080</li>
+                    <li><strong>Entorno:</strong> GitHub Codespaces</li>
+                    <li><strong>Fecha:</strong> <span id="fecha"></span></li>
+                </ul>
+            </div>
+            
+            <div class="actions">
+                <button onclick="recargarPagina()">🔄 Recargar</button>
+                <button onclick="mostrarInfo()">ℹ️ Mostrar info del navegador</button>
+            </div>
+        </main>
+        
+        <footer>
+            <p>Configurado con ❤️ para GitHub Codespaces</p>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

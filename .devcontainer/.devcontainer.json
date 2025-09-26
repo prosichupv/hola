@@ -7,7 +7,33 @@
     }
   },
 
-  // Redirecciona el puerto por defecto de NGINX (80) a uno accesible
-  // Usamos 8080 porque los puertos por debajo de 1024 requieren sudo
-  "forwardPorts": [8080]
+  // Configuración de puertos
+  "forwardPorts": [8080],
+  "portsAttributes": {
+    "8080": {
+      "label": "Nginx Web Server",
+      "onAutoForward": "notify"
+    }
+  },
+
+  // Variables de entorno
+  "containerEnv": {
+    "NGINX_PORT": "8080"
+  },
+
+  // Comandos a ejecutar después de que se cree el contenedor
+  "postCreateCommand": ".devcontainer/setup.sh",
+
+  // Comandos a ejecutar cada vez que se inicie el contenedor
+  "postStartCommand": ".devcontainer/start-nginx.sh",
+
+  // Extensiones de VS Code recomendadas
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.live-server",
+        "bradlc.vscode-tailwindcss"
+      ]
+    }
+  }
 }
