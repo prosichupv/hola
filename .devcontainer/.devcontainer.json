@@ -1,0 +1,13 @@
+{
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+
+  "features": {
+    "ghcr.io/devcontainers/features/nginx:1": {
+      "version": "latest"
+    }
+  },
+
+  // Redirecciona el puerto por defecto de NGINX (80) a uno accesible
+  // Usamos 8080 porque los puertos por debajo de 1024 requieren sudo
+  "forwardPorts": [8080]
+}
